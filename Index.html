@@ -1,0 +1,27 @@
+<!Document>
+<html>
+    <header></header>
+    <head><meta name="Referer" content="https://www.tucktools.com/"></head>
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <body>
+        <h1 id="data">
+        
+        </h1>
+        <button onclick="user()">click me</button>
+    </body>
+    <script>
+        function user(){
+            $.ajax({
+                    type: "GET",
+                    headers:{         
+                        'Referer': 'https://www.tucktools.com/'
+                    },
+                    url: 'https://instaskull.com/tucktools_new?username=shakira',       
+                    succces: function(data){
+                        console.log('success',data);                    
+                    }
+            });
+        }
+    </script>
+</html>
